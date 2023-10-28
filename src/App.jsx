@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 
 import "./App.css";
-import InspirationalHomepage from "./components/InpsirationalHomepage/InspirationalHomepage";
+import {InspirationalHomepage} from "./components/InspirationalHomepage/InspirationalHomepage";
 
 function App() {
   return (

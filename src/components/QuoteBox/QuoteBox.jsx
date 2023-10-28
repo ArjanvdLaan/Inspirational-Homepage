@@ -1,6 +1,6 @@
 // import React from 'react';
 
-const QuoteBox = () => {
+export const QuoteBox = () => {
     return (
         <div className="quote-box">
             {/* Quote will be displayed here */}
@@ -12,4 +12,4 @@ const QuoteBox = () => {
     );
 }
 
-export default QuoteBox;
+
