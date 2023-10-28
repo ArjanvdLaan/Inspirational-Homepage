@@ -38,7 +38,7 @@ export const WeatherBox = () => {
 
   useEffect(() => {
     console.log("useEffect in WeatherBox is running");
-    const apiKey = "747437950a0e03127e6322fe156f65c1";
+    const apiKey = import.meta.env.VITE_API_KEY;
     const endpoint =
       "https://api.openweathermap.org/data/2.5/weather?lat=53.21&lon=6.56&lang=nl&appid=" +
       apiKey;
