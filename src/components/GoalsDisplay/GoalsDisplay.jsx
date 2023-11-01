@@ -1,15 +1,16 @@
 // import React from 'react';
 
-const GoalsDisplay = () => {
-    return (
-        <div className="goals-display">
-            {/* List of goals will be displayed here */}
-            <ul>
-                <li>Sample Goal 1</li>
-                <li>Sample Goal 2</li>
-            </ul>
-        </div>
-    );
-}
+const GoalsDisplay = ({ goals }) => {
+    console.log(goals)
+  return (
+    <div className="goals-display">
+      <ul>
+        {goals.map((goal) => (
+          <li key={goal.id}>{goal.text}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export default GoalsDisplay;
