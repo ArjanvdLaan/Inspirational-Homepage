@@ -1,0 +1,19 @@
+.goals-display ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: top;
+    flex-flow: row wrap;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-top: 1em;
+
+   
+}
+
+li {
+    list-style-type: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: white;
+    padding: .5em;
+}

@@ -1,28 +1,30 @@
 .goals-input-bar {
     display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
 }
 
 .input-bar {
-    width: 100%; /* Adjust this if you want a specific width */
-    height: 50px; /* Adjust based on your needs */
-    background-color: rgba(0, 0, 0, 0); /* Semi-transparent black background */
-    border-radius: 10px; /* Rounded corners */
-    border: none; /* No border */
-    outline: none; /* Remove default focus outline */
-    padding: 0;
-    /* color: white; Text color */
-    font-size: 18px; /* Text size */
-    font-weight: 500; /* Font weight */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    width: 100%; 
+    height: 50px; 
+    background-color: transparent; 
+    border-radius: 10px; 
+    border: none; 
+    outline: none; 
+    padding-left: 0.8em;
+    color: white; 
+    font-size: 18px; 
+    font-weight: 500; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease; 
 }
 
 .goals-input-bar:focus {
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background on focus */
+    background-color: rgba(0, 0, 0, 0.7); 
 }
 
 .goals-input-bar::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* Placeholder text color */
+    color: rgba(255, 255, 255, 0.7); 
 }
 
 input {
@@ -48,11 +50,11 @@ input {
     border-radius: 10px;
     border: none;
     outline: none;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: .4em;
     color: white;
-    font-size: 18px;
+    font-size: 0.8em;
     font-weight: 500;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
+
