@@ -1,6 +1,51 @@
 .weather-box {
-    padding: 20px;
-    border-radius: 10px;
     background-color: transparent;
-    margin-bottom: 18px;
+    
 }
+
+.weather-box p {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0;
+    /* border: 2px solid white;     */
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.weather-icon {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+    padding: 0;
+    margin: 0;
+}
+
+.weather-degrees {
+    padding: auto;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.weather-desc {
+    color: white;
+    text-transform: uppercase;
+    font-size: .7em;
+    line-height: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.weather-city {
+    color: white;
+    text-transform: uppercase;
+    font-size: .7em;
+    line-height: 2.5em;
+    font-family: 'Courier New', Courier, monospace;
+}     

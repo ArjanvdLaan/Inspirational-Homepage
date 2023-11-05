@@ -1,3 +1,10 @@
+/* .goals-display {
+    min-height: 50px;
+    border: 2px solid white;
+    margin: 0;
+    padding: 0;
+} */
+
 .goals-display ul {
     display: flex;
     justify-content: flex-start;
@@ -5,8 +12,8 @@
     flex-flow: row wrap;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    margin-top: 1em;
-
+    margin-top: .7em;
+    min-height: 120px;
    
 }
 
@@ -15,5 +22,27 @@ li {
     font-size: 1.2em;
     font-weight: 500;
     color: white;
-    padding: .5em;
+    padding: 0.5em;
+    margin: .3em;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    height: 35px;
+    align-content: stretch;
+}
+
+li:hover .trash-icon {
+    opacity: 1; 
+  }
+
+.trash-icon {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: .7em;
+    margin-left: .5em;
+    margin-bottom: .7em;
+}
+
+.trash-icon:hover {
+    color: rgb(255, 0, 0);
+    cursor: pointer;
 }

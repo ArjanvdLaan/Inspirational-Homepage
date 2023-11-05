@@ -39,7 +39,7 @@ export const WeatherBox = () => {
 
   useEffect(() => {
     console.log("useEffect in WeatherBox is running");
-    const apiKey = import.meta.env.VITE_API_KEY;
+    const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
     const endpoint =
       "https://api.openweathermap.org/data/2.5/weather?lat=53.21&lon=6.56&lang=nl&appid=" +
       apiKey;
@@ -72,9 +72,14 @@ export const WeatherBox = () => {
     <div className="weather-box">
       {data ? (
         <p>
-          Huidig weer: {data.weather[0].description}
-          <img src={iconUrl} alt="Weather icon" /> <br />
-          {Math.round(data.main.temp - 273.15)}°C
+          <img className="weather-icon" src={iconUrl} alt="Weather icon" />
+          <div className="weather-container">
+          <div className="weather-degrees">
+            {Math.round(data.main.temp - 273.15)}°C
+          </div>
+          <div className="weather-desc">{data.weather[0].description}</div>
+          <span className="weather-city">{data.name}</span>
+          </div>
         </p>
       ) : (
         <p>No weather data available</p>

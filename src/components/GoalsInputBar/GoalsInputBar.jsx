@@ -3,6 +3,10 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./GoalsInputBar.css";
 
+function getRandomColor() {
+  return "#" + Math.floor(Math.random() * 16777215).toString(16);
+}
+
 const GoalsInputBar = ({ setGoals }) => {
   const [goal, setGoal] = useState("");
 
@@ -13,8 +17,13 @@ const GoalsInputBar = ({ setGoals }) => {
       alert("Input field is empty");
       return;
     }
+    const newGoal = {
+      id: uuidv4(),
+      text: goal,
+      color: getRandomColor(), 
+    };
 
-    setGoals((oldGoals) => [...oldGoals, { id: uuidv4(), text: goal }]);
+    setGoals((oldGoals) => [...oldGoals, newGoal]);
     setGoal("");
   };
   return (
@@ -25,10 +34,10 @@ const GoalsInputBar = ({ setGoals }) => {
         value={goal}
         onChange={(e) => setGoal(e.target.value)}
         id="goals"
-        placeholder="Enter your goal"
+        placeholder="What's on your mind?"
       />
       <button className="button" onClick={onSubmit}>
-        Add Goal
+        Add Thought
       </button>
     </div>
   );

@@ -17,14 +17,17 @@
     font-weight: 500; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     transition: background-color 0.3s ease; 
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.goals-input-bar:focus {
-    background-color: rgba(0, 0, 0, 0.7); 
+.input-bar:focus {
+    background-color: rgba(121, 121, 121, 0.7); 
 }
 
-.goals-input-bar::placeholder {
-    color: rgba(255, 255, 255, 0.7); 
+.input-bar::placeholder {
+    color: rgb(233, 233, 233, .6); 
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 input {
@@ -56,5 +59,6 @@ input {
     font-weight: 500;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
+    font-family: 'Courier New', Courier, monospace;
 }
 
