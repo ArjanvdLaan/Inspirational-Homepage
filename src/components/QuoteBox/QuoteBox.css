@@ -10,12 +10,15 @@ blockquote {
     margin: 0;
     padding: 0;
     color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
 }
 
 cite {
     display: block;
     text-align: right;
     margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 0.7em;
     font-style: italic;
     color: white;

@@ -54,6 +54,7 @@ input {
     border: none;
     outline: none;
     margin-left: .4em;
+    cursor: pointer;
     color: white;
     font-size: 0.8em;
     font-weight: 500;

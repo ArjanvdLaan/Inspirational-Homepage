@@ -7,10 +7,21 @@ const App = () => {
   const [imageUrls, setImageUrls] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // every time component mounts, fetch images
   useEffect(() => {
     fetchImages();
   }, []);
 
+
+  // preload images to show them faster
+  useEffect(() => {
+    imageUrls.forEach((imageUrl) => {
+      const img = new Image();
+      img.src = imageUrl;
+    });
+  }, [imageUrls]);
+
+  // fetch images from unsplash
   const fetchImages = async () => {
     try {
       const cachedImages = localStorage.getItem("images");
@@ -39,29 +50,27 @@ const App = () => {
       }
     } catch (error) {
       if (error.response) {
-        // De aanvraag werd gemaakt en de server reageerde met een statuscode
-        // die buiten het bereik van 2xx valt
+        // checking different error responses
         console.log(error.response.data);
         console.log(error.response.status);
         console.log(error.response.headers);
       } else if (error.request) {
-        // Het verzoek werd gemaakt maar er kwam geen reactie
+        // Request made, no response received
         console.log(error.request);
       } else {
-        // Iets ging mis bij het maken van het verzoek
+        // Something happened in setting up the request
         console.log("Error", error.message);
       }
       console.log(error.config);
     }
   };
-
+  // clear images from local storage
   // function clearImages() {
   //   localStorage.removeItem("images");
-    
-    
   // }
   // clearImages();
 
+  // cycle through images
   const cycleImages = (direction) => {
     if (direction === "left") {
       setCurrentImageIndex(

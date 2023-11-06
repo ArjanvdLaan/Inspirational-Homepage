@@ -73,13 +73,13 @@ export const WeatherBox = () => {
       {data ? (
         <p>
           <img className="weather-icon" src={iconUrl} alt="Weather icon" />
-          <div className="weather-container">
-          <div className="weather-degrees">
+          <span className="weather-container">
+          <span className="weather-degrees">
             {Math.round(data.main.temp - 273.15)}°C
-          </div>
-          <div className="weather-desc">{data.weather[0].description}</div>
+          </span>
+          <span className="weather-desc">{data.weather[0].description}</span>
           <span className="weather-city">{data.name}</span>
-          </div>
+          </span>
         </p>
       ) : (
         <p>No weather data available</p>
