@@ -32,7 +32,7 @@ const App = () => {
           Array(5)
             .fill()
             .map(() =>
-              axios.get("https://api.unsplash.com/photos/random?query=dark,nature&w=1920", {
+              axios.get("https://api.unsplash.com/photos/random?query=nature&w=1920", {
                 headers: {
                   Authorization: `Client-ID ${
                     import.meta.env.VITE_IMAGES_API_KEY
