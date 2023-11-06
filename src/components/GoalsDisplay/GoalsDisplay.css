@@ -5,6 +5,12 @@
     padding: 0;
 } */
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
 .goals-display ul {
     display: flex;
     justify-content: flex-start;
@@ -13,8 +19,11 @@
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     margin-top: .7em;
+    /* margin-bottom: .7em; */
     min-height: 120px;
-   
+    max-height: 310px;
+    overflow-y: auto;
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.1); /* Firefox */
 }
 
 li {
@@ -46,3 +55,21 @@ li:hover .trash-icon {
     color: rgb(255, 0, 0);
     cursor: pointer;
 }
+
+/* Scrollbar styling */
+.goals-display ul::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .goals-display ul::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Make it match with the div's background */
+  }
+  
+  .goals-display ul::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    border-radius: 5px;
+  }
+  
+  .goals-display ul::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6); /* Slightly less transparent when hovered */
+  }
