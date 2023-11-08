@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import "./QuoteBox.css";
 
 export const QuoteBox = () => {
-  const API_URL =
-    "/api/quotes/random?tags=technology,famous-quotes";
+  const API_URL = "/api/quotes/random?tags=technology,famous-quotes";
 
   const [quote, setQuote] = useState({ content: "", author: "" });
   const [loading, setLoading] = useState(true);
@@ -16,12 +15,11 @@ export const QuoteBox = () => {
       }
       const json = await response.json();
 
-
-    //   console.log(json);
-    //   // Check if the response contains the expected data
-    //   if (!json.content || !json.author) {
-    //     throw new Error("Invalid response data");
-    //   }
+      //   console.log(json);
+      //   // Check if the response contains the expected data
+      //   if (!json.content || !json.author) {
+      //     throw new Error("Invalid response data");
+      //   }
 
       setQuote(json);
       setLoading(false);
