@@ -3,7 +3,7 @@ import "./QuoteBox.css";
 
 export const QuoteBox = () => {
   const API_URL =
-    "https://api.quotable.io/quotes/random?tags=technology,famous-quotes";
+    "/api.quotable.io/quotes/random?tags=technology,famous-quotes";
 
   const [quote, setQuote] = useState({ content: "", author: "" });
   const [loading, setLoading] = useState(true);
