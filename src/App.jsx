@@ -13,13 +13,15 @@ const App = () => {
   }, []);
 
 
-  // preload images to show them faster
-  useEffect(() => {
-    imageUrls.forEach((imageUrl) => {
-      const img = new Image();
-      img.src = imageUrl;
-    });
-  }, [imageUrls]);
+// preload images to show them faster
+useEffect(() => {
+  imageUrls.forEach((imageUrl) => {
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.style.display = 'none'; // make the image hidden
+    document.body.appendChild(img); // append the image to the body
+  });
+}, [imageUrls]);
 
   // fetch images from unsplash
   const fetchImages = async () => {
