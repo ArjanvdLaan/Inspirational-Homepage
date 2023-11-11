@@ -21,6 +21,7 @@ const App = () => {
     });
   }, [imageUrls]);
 
+  // fetch images from unsplash
   const fetchImages = async () => {
     try {
       const cachedImages = localStorage.getItem("images");
@@ -31,7 +32,7 @@ const App = () => {
           Array(5)
             .fill()
             .map(() =>
-              axios.get("https://api.unsplash.com/photos/random?query=nature&w=30&h=30&blur=10", {
+              axios.get("https://api.unsplash.com/photos/random?query=nature&w=1920", {
                 headers: {
                   Authorization: `Client-ID ${
                     import.meta.env.VITE_IMAGES_API_KEY
@@ -40,29 +41,12 @@ const App = () => {
               })
             )
         );
-  
-        const lowQualityUrls = responses.map((response) => response.data.urls.full);
-        setImageUrls(lowQualityUrls);
-  
-        const highQualityResponses = await Promise.all(
-          Array(5)
-            .fill()
-            .map(() =>
-              axios.get("https://api.unsplash.com/photos/random?query=nature&w=1920&h=1080", {
-                headers: {
-                  Authorization: `Client-ID ${
-                    import.meta.env.VITE_IMAGES_API_KEY
-                  }`,
-                },
-              })
-            )
-        );
-  
-        const highQualityUrls = highQualityResponses.map((response) => response.data.urls.full);
-        setImageUrls(highQualityUrls);
-  
+
+        const urls = responses.map((response) => response.data.urls.full);
+        setImageUrls(urls);
+
         // Cache the images
-        localStorage.setItem("images", JSON.stringify(highQualityUrls));
+        localStorage.setItem("images", JSON.stringify(urls));
       }
     } catch (error) {
       if (error.response) {
