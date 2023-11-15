@@ -97,3 +97,16 @@ li:hover .trash-icon {
     }
   }
 
+@media (max-width: 768px) and (orientation: landscape) {
+  .goals-display ul {
+    min-height: 100px;
+    max-height: 100px;
+    width: 90%;
+    max-width: 350px;
+    overflow-y: auto;
+  }
+
+  li {
+    font-size: .7em;
+  }
+}

@@ -82,3 +82,9 @@
     display: none;
   }
 }
+
+@media (max-width: 768) and (orientation: landscape) {
+  .parent-div {
+    justify-content: space-between;
+  }
+}
