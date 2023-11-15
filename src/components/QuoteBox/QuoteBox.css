@@ -26,6 +26,20 @@ cite {
 
 }
 
+@media (max-width: 1024px) and (orientation: landscape) {
+    .quote-box {
+        padding: 0;
+    }
+    blockquote {
+        font-size: 0.7em;
+    }
+
+    cite {
+        font-size: 0.5em;
+        margin-top: 0;
+    }
+}
+
 @media (max-width: 600px) {
     .quote-box {
         padding: 0;
