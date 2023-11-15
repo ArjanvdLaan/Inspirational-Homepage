@@ -1,7 +1,7 @@
 .quote-box {
     padding: 20px;
     border-radius: 10px;
-    margin-top: 3.5em;
+    /* margin-top: 3.5em; */
     /* background-color: rgba(255, 255, 255, 0.2); */
     /* margin-top: 20%; */
 }
@@ -18,10 +18,25 @@ blockquote {
 cite {
     display: block;
     text-align: right;
-    margin-top: 10px;
+    margin-top: 2em;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.7em;
     font-style: italic;
     color: white;
 
 }
+
+@media (max-width: 600px) {
+    .quote-box {
+        padding: 0;
+    }
+    blockquote {
+        font-size: 0.7em;
+    }
+
+    cite {
+        font-size: 0.5em;
+        margin-top: 0;
+    }
+}
+

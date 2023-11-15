@@ -49,3 +49,24 @@
     line-height: 2.5em;
     font-family: 'Courier New', Courier, monospace;
 }     
+
+@media (max-width: 700px) {
+    .weather-box {
+        margin-top: 0;
+    }
+    .weather-icon {
+        width: 70%;
+    }
+    .weather-container {
+        padding-bottom: 0;
+    }
+    .weather-degrees {
+        font-size: 2em;
+    }
+    .weather-desc {
+        font-size: .6em;
+    }
+    .weather-city {
+        font-size: .6em;
+    }
+}

@@ -5,6 +5,7 @@
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  background-color: #000;
 }
 
 .background::before {
@@ -34,6 +35,8 @@
   position: absolute;
   width: 40%;
   z-index: 3;
+  justify-content: space-around;
+  width: 60%;
 }
 
 .arrow-left,
@@ -53,6 +56,12 @@
 
 .arrow-right {
   right: 10px;
+}
+
+@media (max-width: 700px) {
+  .inspirational-homepage {
+    width: 80%;
+  }
 }
 
 

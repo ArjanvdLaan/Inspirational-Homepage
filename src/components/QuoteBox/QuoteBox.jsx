@@ -15,14 +15,6 @@ export const QuoteBox = () => {
       }
       console.log("response", response);
       const json = await response.json();
-      // const text = await response.text();
-      // console.log("Text", text);
-
-      //   console.log(json);
-      //   // Check if the response contains the expected data
-      //   if (!json.content || !json.author) {
-      //     throw new Error("Invalid response data");
-      //   }
 
       setQuote(json);
       setLoading(false);
