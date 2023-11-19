@@ -74,6 +74,7 @@ li:hover .trash-icon {
     background: rgba(255, 255, 255, 0.6); /* Slightly less transparent when hovered */
   }
 
+
   @media (max-width: 768px) {
     li {
       font-size: 1em;
