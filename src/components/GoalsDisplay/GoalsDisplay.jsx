@@ -12,6 +12,7 @@ const GoalsDisplay = ({ goals, removeGoal, setGoals }) => {
 
   const handleDragOver = (e) => {
     e.preventDefault();
+    e.stopPropagation(); // Stop the event from bubbling up
 
     // Calculate the position of the mouse relative to the element
     const rect = e.target.getBoundingClientRect();
