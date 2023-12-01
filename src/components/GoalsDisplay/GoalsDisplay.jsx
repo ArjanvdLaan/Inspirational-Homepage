@@ -12,21 +12,23 @@ const GoalsDisplay = ({ goals, removeGoal, setGoals }) => {
 
   const handleDragOver = (e) => {
     e.preventDefault();
-    e.stopPropagation(); // Stop the event from bubbling up
-
-    // Calculate the position of the mouse relative to the element
-    const rect = e.target.getBoundingClientRect();
-    const x = e.clientX - rect.left; // x position within the element
-
-    // Remove existing borders
-    e.target.style.borderLeft = "";
-    e.target.style.borderRight = "";
-
-    // Add border to the left or right side based on the mouse position
-    if (x < rect.width / 2) {
-      e.target.style.borderLeft = "2px solid black";
-    } else {
-      e.target.style.borderRight = "2px solid black";
+  
+    // Check if the target is an li element
+    if (e.target.tagName.toLowerCase() === 'li') {
+      // Calculate the position of the mouse relative to the element
+      const rect = e.target.getBoundingClientRect();
+      const x = e.clientX - rect.left; // x position within the element
+  
+      // Remove existing borders
+      e.target.style.borderLeft = '';
+      e.target.style.borderRight = '';
+  
+      // Add border to the left or right side based on the mouse position
+      if (x < rect.width / 2) {
+        e.target.style.borderLeft = '2px solid black';
+      } else {
+        e.target.style.borderRight = '2px solid black';
+      }
     }
   };
 
